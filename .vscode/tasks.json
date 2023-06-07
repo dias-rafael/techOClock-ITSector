@@ -1,0 +1,35 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Flutter-Launch-All",
+        "dependsOn": [
+          "Flutter-Launch-iOS",
+          "Flutter-Launch-Android",
+          "Flutter-Launch-Web"
+        ]
+      },
+      {
+        "label": "Flutter-Launch-Mobile",
+        "dependsOn": [
+          "Flutter-Launch-iOS",
+          "Flutter-Launch-Android",
+        ]
+      },
+      {
+        "label": "Flutter-Launch-iOS",
+        "type": "shell",
+        "command": "flutter run -d '48542C4F-E00D-4390-B469-C7E6C50F5B49' "
+      },
+      {
+        "label": "Flutter-Launch-Android",
+        "type": "shell",
+        "command": "flutter run -d 'emulator-5554' "
+      },
+      {
+        "label": "Flutter-Launch-Web",
+        "type": "shell",
+        "command": "flutter run -d 'Chrome' "
+      }
+    ]
+  }
